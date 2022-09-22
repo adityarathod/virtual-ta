@@ -20,7 +20,7 @@ export default function MessageBox({ onSend }: MessageBoxProps) {
       >
         <input
           type="text"
-          className="bg-white p-4 w-full text-xl outline-none"
+          className="bg-white px-4 py-3 w-full text-md outline-none"
           placeholder="what's the runtime of insertion sort?"
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
@@ -29,7 +29,7 @@ export default function MessageBox({ onSend }: MessageBoxProps) {
           <input
             type="submit"
             value="Send"
-            className="font-bold text-xl"
+            className="font-bold text-md"
             style={{ color: "#1982FC" }}
           />
         </div>

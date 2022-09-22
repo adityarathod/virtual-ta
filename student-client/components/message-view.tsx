@@ -38,9 +38,9 @@ function ChatMessage({ message }: ChatMessageProps) {
     >
       <div
         className={classNames(
-          "p-4",
-          "my-4",
-          "text-xl",
+          "py-3 px-4",
+          "my-2",
+          "text-md",
           "w-full md:w-[60%] xl:w-[45%]",
           fromUser ? "bg-userHighlight" : "bg-gray-300",
           fromUser ? "text-white" : "text-black",

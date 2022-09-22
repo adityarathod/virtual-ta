@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import classNames from "classnames";
 import MessageBox from "../components/message-box";
 import Navbar from "../components/navbar";
 
@@ -24,7 +23,7 @@ export default function Home() {
         fromUser: true,
       },
       {
-        text: "skill issue",
+        text: "I'm not connected to a backend yet so I'm useless :(",
         fromUser: false,
       },
     ]);
