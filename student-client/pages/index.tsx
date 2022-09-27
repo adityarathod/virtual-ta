@@ -17,7 +17,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
 
   const getAnswer = (question: string) => {
-    fetch("http://127.0.0.1:5000/question?user=sunny&question=" + question)
+    fetch("http://sunnyguan.pythonanywhere.com/question?user=sunny&question=" + question)
       .then((res) => res.text())
       .then((response) => {
         setMessages((messages) => [
