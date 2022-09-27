@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 
 import type Message from "../types/message";
 import MessageView from "../components/message-view";
+import useSWR from 'swr';
 
 const initialMessages: Message[] = [
   {
@@ -15,18 +16,37 @@ const initialMessages: Message[] = [
 
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
+
   const addMessage = (msg: string) => {
-    setMessages([
-      ...messages,
-      {
-        text: msg,
-        fromUser: true,
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
-      {
-        text: "I'm not connected to a backend yet so I'm useless :(",
-        fromUser: false,
-      },
-    ]);
+      body: JSON.stringify({
+        title: msg,
+        body: 'bar',
+        userId: 1,
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setMessages([
+          ...messages,
+          {
+            text: msg,
+            fromUser: true,
+          },
+          {
+            text: data.title,
+            fromUser: false,
+          },
+        ]);
+      })
+
   };
   return (
     <div className="flex w-screen h-screen flex-col">
