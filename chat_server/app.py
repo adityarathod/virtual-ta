@@ -18,3 +18,7 @@ def question():
     response = requests.get(api_call).json()
     answer = response["items"][0]["body"]
     return f'The answer to {question} is {answer}'
+
+if __name__ == '__main__':
+    app.run()
+
