@@ -47,8 +47,8 @@ function ChatMessage({ message }: ChatMessageProps) {
           "rounded-t-xl",
           fromUser ? "rounded-bl-xl" : "rounded-br-xl"
         )}
+        dangerouslySetInnerHTML={{__html: text}}
       >
-        {text}
       </div>
     </div>
   );
