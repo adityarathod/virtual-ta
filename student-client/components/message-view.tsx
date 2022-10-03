@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
 import Message from "../types/message";
+import Latex from "react-latex";
 
 interface MessageViewProps {
   messages: Message[];
@@ -48,7 +49,7 @@ function ChatMessage({ message }: ChatMessageProps) {
           fromUser ? "rounded-bl-xl" : "rounded-br-xl"
         )}
       >
-        {text}
+        {message.containsMath ? <Latex>{text}</Latex> : <span>{text}</span>}
       </div>
     </div>
   );
