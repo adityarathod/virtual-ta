@@ -15,12 +15,13 @@ const initialMessages: Message[] = [
 
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const addMessage = (msg: string) => {
+  const addMessage = (msg: string, containsMath: boolean) => {
     setMessages([
       ...messages,
       {
         text: msg,
         fromUser: true,
+        containsMath,
       },
       {
         text: "I'm not connected to a backend yet so I'm useless :(",
