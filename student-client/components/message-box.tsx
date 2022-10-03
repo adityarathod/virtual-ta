@@ -38,7 +38,7 @@ export default function MessageBox({ onSend }: MessageBoxProps) {
         className="flex flex-row bg-white items-center"
         onSubmit={(e) => {
           if (msg.trim().length > 0) {
-            onSend(msg.trim(), containsMath || msg.includes("$"));
+            onSend(msg.trim(), containsMath);
             setMsg("");
           }
           e.preventDefault();
