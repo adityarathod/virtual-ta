@@ -31,12 +31,13 @@ export default function Home() {
       });
   };
 
-  const addMessage = (msg: string) => {
+  const addMessage = (msg: string, containsMath: boolean) => {
     setMessages((messages) => [
       ...messages,
       {
         text: msg,
         fromUser: true,
+        containsMath,
       },
     ]);
     getAnswer(msg);
