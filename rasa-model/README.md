@@ -15,6 +15,6 @@ Apple Silicon: `python -m rasa train`
 # Testing bot in commandline
 `rasa shell`
 
-Apple Silicon: `python -m rasa train`
+Apple Silicon: `python -m rasa shell`
 ## Docs
 https://rasa.com/docs/rasa/
