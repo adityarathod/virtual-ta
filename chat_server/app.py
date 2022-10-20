@@ -14,7 +14,7 @@ def question():
     user = request.args.get('user')
     question = request.args.get('question')
 
-    url = "https://8602-129-110-242-176.ngrok.io/webhooks/rest/webhook"
+    url = "http://localhost:5005/webhooks/rest/webhook"
 
     payload = json.dumps({
       "sender": user,
