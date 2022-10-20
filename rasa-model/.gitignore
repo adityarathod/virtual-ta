@@ -1,0 +1,5 @@
+.rasa
+
+models/
+
+rasa-model/actions/__pycache__/
