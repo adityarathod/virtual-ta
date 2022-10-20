@@ -13,8 +13,14 @@ https://github.com/gerasimos/doc-rasa-on-m1
 Apple Silicon: `python -m rasa train` 
 
 # Testing bot in commandline
+`rasa run actions` -- run this in a separate terminal window, it starts the custom actions server 
+
 `rasa shell`
 
-Apple Silicon: `python -m rasa shell`
+Apple Silicon: 
+
+`python -m rasa run actions`
+
+`python -m rasa shell`
 ## Docs
 https://rasa.com/docs/rasa/
