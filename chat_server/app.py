@@ -30,12 +30,10 @@ def rasa(user, question):
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    print("response text", response.text)
     value = json.loads(response.text)
-    print("json", value)
     if value and len(value) != 0 and 'text' in value[0]:
         return value[0]['text']
-    return "Watch your language!!! (rasa doesn't understand you, try adding GOOG anywhere to use google search)"
+    return "I couldn't find any answers for that :("
 
 
 
@@ -55,5 +53,5 @@ def question():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(port=5000)
 
