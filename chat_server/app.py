@@ -24,6 +24,8 @@ NO_ANSWER = [
 QUESTION_FAT = [
     "what is",
     "what are",
+    "how to",
+    "can i",
     "?"
 ]
 
