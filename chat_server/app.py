@@ -16,6 +16,11 @@ FILLERS = [
     "That's an interesting question, let me show you what people on StackOverflow thought about it."
 ]
 
+NO_ANSWER = [
+    "That's a tough question. Unfortunately I don't have an answer for you, but I'll ask your professor for you!",
+    "Wow great question. I couldn't find an answer for you, but I sent it over to your professor and they'll answer you soon!"
+]
+
 QUESTION_FAT = [
     "what is",
     "what are",
@@ -26,6 +31,8 @@ QUESTION_FAT = [
 def fetch_answer(so_question_id):
     api_call = f"https://api.stackexchange.com/2.3/questions/{so_question_id}/answers?order=desc&sort=votes&site=stackoverflow&filter=withbody"
     response = requests.get(api_call).json()
+    if len(response["items"]) == 0:
+        return False
     return response["items"][0]["body"]
 
 def google(question):
@@ -41,10 +48,17 @@ def stackoverflow(question):
         question = question.replace(fat, "")
     api_call = f"https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance&q={question}&site=stackoverflow&filter=withbody"
     response = requests.get(api_call).json()
+    if len(response["items"]) == 0:
+        return random.choice(NO_ANSWER)
+
     title = response["items"][0]["title"]
     question_body = response["items"][0]["body"]
     so_question_id = response["items"][0]["question_id"]
+
     answer = fetch_answer(so_question_id)
+    if not answer:
+        return random.choice(NO_ANSWER)
+
     return f'''
     {random.choice(FILLERS)}
     <hr />
