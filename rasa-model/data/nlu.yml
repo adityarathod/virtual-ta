@@ -101,3 +101,13 @@ nlu:
     - asymptotic complexity of [kmp](algorithm)? 
     - time complexity of running [bfs](algorithm) on a graph? 
     - how long does [merge sort](algorithm) take? 
+
+- intent: definition
+  examples: | 
+    - define (merge sort)[topic]
+    - what is a (proof)[topic]? 
+    - how does (sorting)[topic] work?
+    - what is the definition of (loop invariant)[topic]?  
+    - what does (in place)[topic] mean? 
+    - what is the purpose of a (proof)[topic]? 
+    - how do i do a (proof)[topic]?

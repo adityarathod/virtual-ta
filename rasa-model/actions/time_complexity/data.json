@@ -1,0 +1,20 @@
+{
+    "bfs": "O(V + E) where V == number of verticies and E == number of edges", 
+    "breadth first search": "O(V + E) where V == number of verticies and E == number of edges", 
+
+    "dfs": "O(V + E) where V == number of verticies and E == number of edges", 
+    "depth first search": "O(V + E) where V == number of verticies and E == number of edges", 
+
+    "binary search": "O(log(n))", 
+    "merge sort": "O(n * log(n))", 
+    "quick sort": "Best and average case is O(n * log(n)), worst case is O(n ^ 2)", 
+    "heap sort": "O(n * log(n))", 
+    "insertion sort": "O(n^2), but best case time complexity is O(n)",
+    "bubble sort": "O(n^2), but best case time complexity is O(n)", 
+
+    "dijkstras algorithm": "O(E * log(V)), or O(V^2) in worst case", 
+    "prims algorithm": "O(E * log(V)), or O(V^2) in worst case", 
+    "bellman ford algorithm": "O(E * V)", 
+    "floyd warshall algorithm": "O(V^3)", 
+    "topological sort": "O(V + E)" 
+}

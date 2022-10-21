@@ -1,0 +1,14 @@
+{
+    "algorithm": "any well-defined computational  procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. An algorithm is thus a sequence of computational steps that transform the input into the output.", 
+    "data structure": "a way to store and organize data in order to facilitate access and modifications", 
+    "sorting problem": "reordering a sequence of numbers such that a_1 <= a_2 <= ... a_n, or in other words, the sequence is monotonically increasing", 
+    "monotonically decreasing": "always decreasing or remaining constant, and never increasing",
+    "monotonically increasing": "always increasing or remaining constant, and never decreasing", 
+    "monotonic": "consistantly increasing or decreasing. e.g. a monotonic function would never both increase and decrease", 
+
+    "insertion sort": "remove values from the array and re-insert them in sorted order, from left to right or vice versa.", 
+    "in place": "without requiring additional memory", 
+    "loop invariant": "the rules that are applied and the resulting state after each iteration of the loop. Loop invariants help to understand and prove that an algorithm is correct. Loop invariants consist of the Initialization (what is true before prior to the first iteration?), Maintenance (if it is true before an interation of the loop, it remains true before the next iteration), and Termination (when the loop terminates, the invariant gies us a useful property that helps show that hte algorithm is correct",
+    "proof": "an argument that a statement guarantees a conclusion. e.g. a proof for insertion sort could show how it guarantees a sorted array", 
+    "pseudocode": "an informal code-like description of the steps in an algorithm. See examples here: https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/"
+}

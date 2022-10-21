@@ -9,9 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - time_complexity
+  - definition
 
 entities: 
   - algorithm 
+  - topic 
 
 slots: 
   algorithm: 
@@ -19,6 +21,11 @@ slots:
     mappings: 
     - type: from_entity
       entity: algorithm
+  topic: 
+    type: text 
+    mappings: 
+    - type: from_entity
+      entity: topic
 
 responses:
   utter_greet:
@@ -41,7 +48,8 @@ responses:
   - text: "I am a bot, powered by Rasa."
   
 actions: 
-  - action_time_complexity
+  - action_time_complexity 
+  - action_definitions
 
 
 session_config:
