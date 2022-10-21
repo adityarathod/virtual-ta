@@ -28,6 +28,18 @@ interface ChatMessageProps {
 
 function ChatMessage({ message }: ChatMessageProps) {
   const { text, fromUser } = message;
+
+  let textClasses = classNames(
+    "py-3 px-4",
+    "my-2",
+    "text-md",
+    "w-full md:w-[60%] xl:w-[45%]",
+    fromUser ? "bg-userHighlight" : "bg-gray-300",
+    fromUser ? "text-white" : "text-black",
+    "rounded-t-xl",
+    fromUser ? "rounded-bl-xl" : "rounded-br-xl"
+  );
+
   return (
     <div
       className={classNames(
@@ -37,20 +49,13 @@ function ChatMessage({ message }: ChatMessageProps) {
         fromUser && "justify-end"
       )}
     >
-      <div
-        className={classNames(
-          "py-3 px-4",
-          "my-2",
-          "text-md",
-          "w-full md:w-[60%] xl:w-[45%]",
-          fromUser ? "bg-userHighlight" : "bg-gray-300",
-          fromUser ? "text-white" : "text-black",
-          "rounded-t-xl",
-          fromUser ? "rounded-bl-xl" : "rounded-br-xl"
-        )}
-      >
-        {message.containsMath ? <Latex>{text}</Latex> : <span>{text}</span>}
-      </div>
+      {fromUser ?
+        <div className={textClasses}>
+          {message.containsMath ? <Latex>{text}</Latex> : <span>{text}</span>}
+        </div>
+        :
+        <div className={textClasses} dangerouslySetInnerHTML={{ __html: text }}></div>
+      }
     </div>
   );
 }
