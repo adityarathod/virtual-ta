@@ -104,10 +104,25 @@ nlu:
 
 - intent: definition
   examples: | 
-    - define (merge sort)[topic]
-    - what is a (proof)[topic]? 
-    - how does (sorting)[topic] work?
-    - what is the definition of (loop invariant)[topic]?  
-    - what does (in place)[topic] mean? 
-    - what is the purpose of a (proof)[topic]? 
-    - how do i do a (proof)[topic]?
+    - define [merge sort](topic)?
+    - how does [sorting](topic) work?
+    - what is the definition of [loop invariant](topic)?  
+    - what does [in place](topic) mean? 
+    - what is the purpose of a [proof](topic)? 
+    - how do i do a [proof](topic)?
+    - What are the purposes of [proof](topic)?
+    - What is the purpose of [proof](topic)?
+    - What's the purpose of [dikjstras](topic)?
+    - What is the purpose of [prims](topic)?
+    - What are the purposes of [kruskals](topic)?
+    - What is [binary search](topic)?
+    - What does [asymptotic](topic) mean?
+    - What does [complexity](topic) mean?
+    - What does the [base case](topic) mean?
+    - How do I do [bfs](topic)?
+    - How can I do [dfs](topic)?
+    - How do you do [min heap](topic)?
+    - How do I do a [min heap](topic)?
+    - How do I do the [max heap](topic)?
+    - How do I do [quick select](topic)?
+    - how do I do [floyd warshall](topic)?

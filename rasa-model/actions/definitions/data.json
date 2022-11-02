@@ -1,5 +1,5 @@
 {
-    "algorithm": "any well-defined computational  procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. An algorithm is thus a sequence of computational steps that transform the input into the output.", 
+    "algorithm": "any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. An algorithm is thus a sequence of computational steps that transform the input into the output.", 
     "data structure": "a way to store and organize data in order to facilitate access and modifications", 
     "sorting problem": "reordering a sequence of numbers such that a_1 <= a_2 <= ... a_n, or in other words, the sequence is monotonically increasing", 
     "monotonically decreasing": "always decreasing or remaining constant, and never increasing",
@@ -10,5 +10,18 @@
     "in place": "without requiring additional memory", 
     "loop invariant": "the rules that are applied and the resulting state after each iteration of the loop. Loop invariants help to understand and prove that an algorithm is correct. Loop invariants consist of the Initialization (what is true before prior to the first iteration?), Maintenance (if it is true before an interation of the loop, it remains true before the next iteration), and Termination (when the loop terminates, the invariant gies us a useful property that helps show that hte algorithm is correct",
     "proof": "an argument that a statement guarantees a conclusion. e.g. a proof for insertion sort could show how it guarantees a sorted array", 
-    "pseudocode": "an informal code-like description of the steps in an algorithm. See examples here: https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/"
+    "pseudocode": "an informal code-like description of the steps in an algorithm. See examples here: https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/", 
+    "fibonacci": "the next value in the fibonacci sequence is the sum of the previous two values", 
+    "recursion": "a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. Recursion solves such recursive problems by using functions that call themselves from within their own code.", 
+    "big o": "a loose upper bound on how fast a function grows", 
+    "run time analysis": "figuring out how fast your algorithm or program runs", 
+    "big omega": "the lower bound on how fast a function grows", 
+    "theta": "when you know exactly how long a function will run", 
+    "induction": "a method of proving that an algorithm is correct. Contains a base case and a recursive, or inductive, case that details how to expand the problem to a larger set.",
+    "tower of hanoi": "the great temple at Benares contains three diamond needles. There are sixty-four golden disks threaded by one of the needles, and they are stacked from the biggest disk on the bottom to smallest disk on top. Monks at the temple will move disks from one needle to another, but they may only move one disk at a time, and they may never stack a larger disk on top of a smaller one. When they move all the disks from the starting needle to a particular destination needle, the temple will crumble to dust, and the world will end.", 
+    "mergesort": "a divide and conquer sorting algorithm where you divide the array into 2 subarrays of roughly equal size, recursively mergesort the 2 subarrays, and merge the sorted subarrays into a single sorted array.",
+    "quicksort": "a divide and conquer sorting algorithm where you choose a pivot element, partition the elements to greater than, less than, or equal to the pivot, then sort the subarrays.",
+    "divide and conquer": "steps: divide the instance into several independent smaller instances of the same problem, delegate each smaller instance to the recursion fairy, combine the solutions for the smaller instances into the solution for the given instance.", 
+    "recursion tree": "a rooted tree that describes the contributions at different subinstances of a recurrence or the time spent in different subproblems of a recursive algorithm. Each node of the tree represents a single subproblem. In particular, the root node represents the top level subproblem", 
+    "median of medians": "a method of finding the approximate median of an array, used in quick sort to create balanced partitions"
 }
