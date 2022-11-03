@@ -1,128 +1,130 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-# to do: add more training data (when training data is low, entity and slot will be None)
-- intent: time_complexity
-  examples: | 
-    - what is the time complexity of [binary search](algorithm)?
-    - what is the runtime complexity of [dfs](algorithm)? 
-    - what is the complexity of [radix sort](algorithm)? 
-    - how fast is [bfs](algorithm)? 
-    - how fast can you do a [binary search](algorithm)? 
-    - asymptotic complexity of [kmp](algorithm)? 
-    - time complexity of running [bfs](algorithm) on a graph? 
-    - how long does [merge sort](algorithm) take? 
+  # to do: add more training data (when training data is low, entity and slot will be None)
+  - intent: time_complexity
+    examples: |
+      - what is the time complexity of [binary search](algorithm)?
+      - what is the runtime complexity of [dfs](algorithm)? 
+      - what is the complexity of [radix sort](algorithm)? 
+      - how fast is [bfs](algorithm)? 
+      - how fast can you do a [binary search](algorithm)? 
+      - asymptotic complexity of [kmp](algorithm)? 
+      - time complexity of running [bfs](algorithm) on a graph? 
+      - how long does [merge sort](algorithm) take?
 
-- intent: definition
-  examples: | 
-    - define [merge sort](topic)?
-    - how does [sorting](topic) work?
-    - what is the definition of [loop invariant](topic)?  
-    - what does [in place](topic) mean? 
-    - what is the purpose of a [proof](topic)? 
-    - how do i do a [proof](topic)?
-    - What are the purposes of [proof](topic)?
-    - What is the purpose of [proof](topic)?
-    - What's the purpose of [dikjstras](topic)?
-    - What is the purpose of [prims](topic)?
-    - What are the purposes of [kruskals](topic)?
-    - What is [binary search](topic)?
-    - What does [asymptotic](topic) mean?
-    - What does [complexity](topic) mean?
-    - What does the [base case](topic) mean?
-    - How do I do [bfs](topic)?
-    - How can I do [dfs](topic)?
-    - How do you do [min heap](topic)?
-    - How do I do a [min heap](topic)?
-    - How do I do the [max heap](topic)?
-    - How do I do [quick select](topic)?
-    - how do I do [floyd warshall](topic)?
+  - intent: definition
+    examples: |
+      - define [merge sort](topic)?
+      - define [$\\omega$](topic)?
+      - how does [sorting](topic) work?
+      - what is the definition of [loop invariant](topic)?  
+      - what does [in place](topic) mean? 
+      - what is the purpose of a [proof](topic)? 
+      - how do i do a [proof](topic)?
+      - What are the purposes of [proof](topic)?
+      - What is the purpose of [proof](topic)?
+      - What's the purpose of [dikjstras](topic)?
+      - What is the purpose of [prims](topic)?
+      - What are the purposes of [kruskals](topic)?
+      - What is [binary search](topic)?
+      - What does [asymptotic](topic) mean?
+      - What does [complexity](topic) mean?
+      - What does the [base case](topic) mean?
+      - How do I do [bfs](topic)?
+      - How can I do [dfs](topic)?
+      - How do you do [min heap](topic)?
+      - How do I do a [min heap](topic)?
+      - How do I do the [max heap](topic)?
+      - How do I do [quick select](topic)?
+      - how do I do [floyd warshall](topic)?
+      - wtf is a [acyclic graph](topic)?
