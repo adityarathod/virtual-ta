@@ -9,4 +9,5 @@
 
 from time_complexity.time_action import * 
 from definitions.definitions import * 
+from equation_solver.equation_action import ActionSolveEquation
 from rasa_sdk.events import SlotSet

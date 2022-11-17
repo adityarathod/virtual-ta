@@ -228,3 +228,26 @@ nlu:
       - what is a [complete tree](topic)
       - what is [local alignment](topic)
       - what is [circuit complexity](topic)
+
+  - regex: equation
+    examples: | 
+      - \$.*\$
+
+  - intent: equation_solver
+    examples: | 
+      - solve [$\log_10$](equation) 
+      - solve [$5^3$](equation) 
+      - solve [$ 10 ^ 2 + 5 $](equation) 
+      - solve [$\lim_{n \to \infty}{1/x}$](equation) 
+      - solve [$ O(n) $](equation) 
+      - what is [$\log_10$](equation) 
+      - what is [$5^3$](equation) 
+      - what is [$ 10 ^ 2 + 5 $](equation) 
+      - what is [$\lim_{n \to \infty}{1/x}$](equation) 
+      - what is [$ O(n) $](equation)
+      - what is the answer to [$\frac{\partial}{\partial x}$](equation) 
+      - what is the answer to [$\log_10$](equation) 
+      - what is the answer to [$5^3$](equation) 
+      - what is the answer to [$ 10 ^ 2 + 5 $](equation) 
+      - what is the answer to [$\lim_{n \to \infty}{1/x}$](equation) 
+      - what is the answer to [$ O(n) $](equation)
