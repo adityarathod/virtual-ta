@@ -39,7 +39,7 @@ If you choose not to typewrite your assignment, you will need to scan and upload
 Term project are worth 15% of the course grade.
 There will be a term project due at the end of the semester.
 The project is intended to provide you with hands-on experience with applying machine learning techniques to a research problem.
-Midterm exams are worth 34% of the course grade total, which will be two midterm exams, tentatively scheduled on Oct 5 and the second on Nov 16.
+Midterm exams are worth 34% of the course grade total, which will be two midterm exams, tentatively scheduled on Oct 5, and the second on Nov 16.
 Final exam is worth 24% of the course grade, which will be a comprehensive final exam during the final exam period.'''
 """
 
@@ -120,7 +120,7 @@ def question():
     question = question.replace('SYL', '')
 
     if use_syllabus:
-        return question_answerer(question="How much percentage does final exam hold?", context=context)['answer']
+        return question_answerer(question=question, context=context)['answer']
     elif use_google:
         return stackoverflow(question)
     return rasa(user, question)
