@@ -3,6 +3,8 @@ To setup Rasa:
 # Setup
 cd to this folder and run `pip3 install -U --user pip && pip3 install rasa`
 
+Also do `pip install thefuzz[speedup]`
+
 ## Setup on Apple Silicon 
 Prereq: Homebrew and Python installed
 
