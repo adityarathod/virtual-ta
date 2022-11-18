@@ -29,7 +29,7 @@ QUESTION_FAT = [
     "?"
 ]
 
-question_answerer = pipeline("question-answering", model='distilbert-base-cased-distilled-squad')
+# question_answerer = pipeline("question-answering", model='distilbert-base-cased-distilled-squad')
 
 context = r"""
 Homework assignments are worth 27% of the course grade.
