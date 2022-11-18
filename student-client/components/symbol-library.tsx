@@ -25,6 +25,7 @@ const SYMBOLS = [
   "\\impliedby",
   "\\iff",
   "\\therefore",
+  "\\approx",
 ];
 
 interface SymbolLibraryProps {
