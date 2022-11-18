@@ -4,7 +4,6 @@ from googlesearch import search
 import requests
 import json
 import random
-import torch
 from transformers import pipeline
 
 app = Flask(__name__)
