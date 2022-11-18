@@ -4,7 +4,8 @@ from googlesearch import search
 import requests
 import json
 import random
-
+import torch
+from transformers import pipeline
 
 app = Flask(__name__)
 CORS(app)
@@ -28,6 +29,20 @@ QUESTION_FAT = [
     "can i",
     "?"
 ]
+
+question_answerer = pipeline("question-answering", model='distilbert-base-cased-distilled-squad')
+
+context = r"""
+Homework assignments are worth 27% of the course grade.
+There will be approximately 6 homework assignments, they will include a combination of problem sets (of a sort) and programming.
+Since we will be using Gradescope for submission and grading, you must upload an electronic copy of your assignment by the due date.
+If you choose not to typewrite your assignment, you will need to scan and upload your submission.
+Term project are worth 15% of the course grade.
+There will be a term project due at the end of the semester.
+The project is intended to provide you with hands-on experience with applying machine learning techniques to a research problem.
+Midterm exams are worth 34% of the course grade total, which will be two midterm exams, tentatively scheduled on Oct 5 and the second on Nov 16.
+Final exam is worth 24% of the course grade, which will be a comprehensive final exam during the final exam period.'''
+"""
 
 
 def fetch_answer(so_question_id):
@@ -102,7 +117,12 @@ def question():
     use_google = 'GOOG' in question
     question = question.replace("GOOG", "")
 
-    if use_google:
+    use_syllabus = 'SYL' in question
+    question = question.replace('SYL', '')
+
+    if use_syllabus:
+        return question_answerer(question="How much percentage does final exam hold?", context=context)['answer']
+    elif use_google:
         return stackoverflow(question)
     return rasa(user, question)
 
