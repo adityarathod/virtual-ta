@@ -4,7 +4,7 @@ from googlesearch import search
 import requests
 import json
 import random
-from transformers import pipeline
+# from transformers import pipeline
 
 app = Flask(__name__)
 CORS(app)
@@ -116,12 +116,12 @@ def question():
     use_google = 'GOOG' in question
     question = question.replace("GOOG", "")
 
-    use_syllabus = 'SYL' in question
-    question = question.replace('SYL', '')
-
-    if use_syllabus:
-        return question_answerer(question="How much percentage does final exam hold?", context=context)['answer']
-    elif use_google:
+#     use_syllabus = 'SYL' in question
+#     question = question.replace('SYL', '')
+#
+#     if use_syllabus:
+#         return question_answerer(question="How much percentage does final exam hold?", context=context)['answer']
+    if use_google:
         return stackoverflow(question)
     return rasa(user, question)
 
