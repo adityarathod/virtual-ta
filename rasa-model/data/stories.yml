@@ -38,3 +38,8 @@ stories:
   steps: 
   - intent: definition
   - action: action_definitions
+
+- story: equation path
+  steps:
+  - intent: equation_solver
+  - action: solve_equation

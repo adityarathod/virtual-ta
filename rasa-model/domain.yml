@@ -10,10 +10,12 @@ intents:
   - bot_challenge
   - time_complexity
   - definition
+  - equation_solver
 
 entities: 
   - algorithm 
-  - topic 
+  - topic
+  - equation
 
 slots: 
   algorithm: 
@@ -26,6 +28,11 @@ slots:
     mappings: 
     - type: from_entity
       entity: topic
+  equation:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: equation
 
 responses:
   utter_greet:
@@ -50,6 +57,7 @@ responses:
 actions: 
   - action_time_complexity 
   - action_definitions
+  - solve_equation
 
 
 session_config:

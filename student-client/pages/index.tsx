@@ -15,18 +15,32 @@ const initialMessages: Message[] = [
 
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const addMessage = (msg: string) => {
-    setMessages([
+
+  const getAnswer = (question: string) => {
+    fetch("https://8fb6-129-110-242-176.ngrok.io/question?user=bh9000&question=" + question)
+      .then((res) => res.text())
+      .then((response) => {
+        setMessages((messages) => [
+          ...messages,
+          {
+            text: response,
+            fromUser: false,
+          },
+        ]);
+        console.log(messages);
+      });
+  };
+
+  const addMessage = (msg: string, containsMath: boolean) => {
+    setMessages((messages) => [
       ...messages,
       {
         text: msg,
         fromUser: true,
-      },
-      {
-        text: "I'm not connected to a backend yet so I'm useless :(",
-        fromUser: false,
+        containsMath,
       },
     ]);
+    getAnswer(msg);
   };
   return (
     <div className="flex w-screen h-screen flex-col">
