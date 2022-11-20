@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rasa run --model ../models/ &
-rasa run action
+rasa run &
+cd actions && rasa run action
