@@ -1,103 +1,253 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-# to do: add more training data (when training data is low, entity and slot will be None)
-- intent: time_complexity
-  examples: | 
-    - what is the time complexity of [binary search](algorithm)?
-    - what is the runtime complexity of [dfs](algorithm)? 
-    - what is the complexity of [radix sort](algorithm)? 
-    - how fast is [bfs](algorithm)? 
-    - how fast can you do a [binary search](algorithm)? 
-    - asymptotic complexity of [kmp](algorithm)? 
-    - time complexity of running [bfs](algorithm) on a graph? 
-    - how long does [merge sort](algorithm) take? 
+  # to do: add more training data (when training data is low, entity and slot will be None)
+  - intent: time_complexity
+    examples: |
+      - what is the time complexity of [binary search](algorithm)?
+      - what is the runtime complexity of [dfs](algorithm)? 
+      - what is the complexity of [radix sort](algorithm)? 
+      - how fast is [bfs](algorithm)? 
+      - how fast can you do a [binary search](algorithm)? 
+      - asymptotic complexity of [kmp](algorithm)? 
+      - time complexity of running [bfs](algorithm) on a graph? 
+      - how long does [merge sort](algorithm) take?
+
+  - intent: definition
+    examples: |
+      - define [merge sort](topic)?
+      - define [$\\omega$](topic)?
+      - how does [sorting](topic) work?
+      - what is the definition of [loop invariant](topic)?  
+      - what does [in place](topic) mean? 
+      - what is the purpose of a [proof](topic)? 
+      - how do i do a [proof](topic)?
+      - What are the purposes of [proof](topic)?
+      - What is the purpose of [proof](topic)?
+      - What's the purpose of [dikjstras](topic)?
+      - What is the purpose of [prims](topic)?
+      - What are the purposes of [kruskals](topic)?
+      - What is [binary search](topic)?
+      - What does [asymptotic](topic) mean?
+      - What does [complexity](topic) mean?
+      - What does the [base case](topic) mean?
+      - How do I do [bfs](topic)?
+      - How can I do [dfs](topic)?
+      - How do you do [min heap](topic)?
+      - How do I do a [min heap](topic)?
+      - How do I do the [max heap](topic)?
+      - How do I do [quick select](topic)?
+      - how do I do [floyd warshall](topic)?
+      - wtf is a [acyclic graph](topic)?
+      - what is the [Ford-Fulkerson method](topic)
+      - what is a [Fibonacci number](topic)
+      - what is [polyphase merge sort](topic)
+      - what is a [jump list](topic)
+      - what is an [external index](topic)
+      - what is an [optimization problem](topic)
+      - what is a [threaded binary tree](topic)
+      - what is [or](topic)
+      - what is a [deterministic algorithm](topic)
+      - what is a [deterministic tree automaton](topic)
+      - what is a [randomized binary search tree](topic)
+      - what is a [trie](topic)
+      - what is a [zipper](topic)?
+      - what is the [halting problem](topic)
+      - what is [homeomorphic](topic)
+      - what is a [double left rotation](topic)
+      - what is a [leftist tree](topic)
+      - what is a [move-to-front heuristic](topic)
+      - what is a [rooted tree](topic)
+      - what is a [height-balanced binary search tree](topic)
+      - what is a [hash function](topic)
+      - what is an [optimal mismatch](topic)
+      - what is [graph coloring](topic)
+      - what is a [hash table](topic)
+      - what is [extended k-d tree](topic)
+      - what is [bozo sort](topic)
+      - what is the [knight's tour](topic)
+      - what is [blind trie](topic)
+      - what is a [phonetic coding](topic)
+      - what is [link](topic)
+      - what is [doubly linked list](topic)
+      - what is the [Fibonaccian search](topic)
+      - what is the [Doomsday rule](topic)
+      - what is [topological order](topic)
+      - what is the [big-O notation](topic)
+      - what is [busy beaver](topic)
+      - what is [search](topic)
+      - what is [Alpha Skip Search algorithm](topic)
+      - what is [bin packing problem](topic)
+      - what is the [Calculus of Communicating Systems](topic)
+      - what is [left rotation](topic)
+      - what is the [Monte Carlo algorithm](topic)
+      - what is [exponential](topic)
+      - what is [median](topic)
+      - what is [order-preserving minimal perfect hashing](topic)
+      - what is [run time](topic)
+      - what is [end-of-string](topic)
+      - what is [gamma function](topic)
+      - what is [bucket trie](topic)
+      - what is [cutting plane](topic)
+      - what is a [cut](topic)
+      - what is the [Two Way algorithm](topic)
+      - what is [Kruskal's algorithm](topic)
+      - what is [strongly connected component](topic)
+      - what is [locality-sensitive hashing](topic)
+      - what is [capacity](topic)
+      - what is a [sibling](topic)
+      - what is [deterministic algorithm](topic)
+      - what is [k-way merge sort](topic)
+      - what is [exhaustive search](topic)
+      - what is [total function](topic)
+      - what is [treap](topic)
+      - what is [complexity](topic)
+      - what is [in-place sort](topic)
+      - what is [double hashing](topic)
+      - what is [optimal polyphase merge](topic)
+      - what is [brute force string search with mismatches](topic)
+      - what is [height-balanced binary search tree](topic)
+      - what is [Knuth-Morris-Pratt algorithm](topic)
+      - what is [link](topic)
+      - what is the [external sort](topic)
+      - what is [k-d-B-tree](topic)
+      - what is [relaxation](topic)
+      - what is [ANSI](topic)
+      - what is [simple uniform hashing](topic)
+      - what is [information theoretic bound](topic)
+      - what is [select and partition](topic)
+      - what is a [permutation](topic)
+      - what is [BD-tree](topic)
+      - what is [free edge](topic)
+      - what is [balanced binary tree](topic)
+      - what is an [abstract data type](topic)
+      - what is [divide and conquer](topic)
+      - what is [multiway merge](topic)
+      - what is the [cactus stack](topic)
+      - what is [Bradford's law](topic)
+      - what is the [median](topic)
+      - what is an [ancestor](topic)
+      - what is [Benford's law](topic)
+      - what is [Apostolico-Crochemore](topic)
+      - what is [select kth element](topic)
+      - what is [optimal polygon triangulation problem](topic)
+      - what is a [link](topic)
+      - what is [meld](topic)
+      - what is a [Moore machine](topic)
+      - what is [hard split, easy merge](topic)
+      - what is a [linear program](topic)
+      - what is a [complete tree](topic)
+      - what is [local alignment](topic)
+      - what is [circuit complexity](topic)
+
+  - regex: equation
+    examples: | 
+      - \$.*\$
+
+  - intent: equation_solver
+    examples: | 
+      - solve [$\log_10$](equation) 
+      - solve [$5^3$](equation) 
+      - solve [$ 10 ^ 2 + 5 $](equation) 
+      - solve [$\lim_{n \to \infty}{1/x}$](equation) 
+      - solve [$ O(n) $](equation) 
+      - what is [$\log_10$](equation) 
+      - what is [$5^3$](equation) 
+      - what is [$ 10 ^ 2 + 5 $](equation) 
+      - what is [$\lim_{n \to \infty}{1/x}$](equation) 
+      - what is [$ O(n) $](equation)
+      - what is the answer to [$\frac{\partial}{\partial x}$](equation) 
+      - what is the answer to [$\log_10$](equation) 
+      - what is the answer to [$5^3$](equation) 
+      - what is the answer to [$ 10 ^ 2 + 5 $](equation) 
+      - what is the answer to [$\lim_{n \to \infty}{1/x}$](equation) 
+      - what is the answer to [$ O(n) $](equation)

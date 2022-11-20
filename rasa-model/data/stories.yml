@@ -33,3 +33,13 @@ stories:
   steps: 
   - intent: time_complexity
   - action: action_time_complexity
+
+- story: definition path 
+  steps: 
+  - intent: definition
+  - action: action_definitions
+
+- story: equation path
+  steps:
+  - intent: equation_solver
+  - action: solve_equation
