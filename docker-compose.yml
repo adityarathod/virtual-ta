@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  flask-server:
+    build: ./chat_server/
+    ports:
+      - "5000:5000"
+  rasa-server:
+    build: ./rasa-model/
+    ports:
+      - "5005:5005"
+    expose:
+      - "5005"
+  action-server:
+    build: ./rasa-model/actions/
+    expose: 
+      - "5055"
