@@ -88,7 +88,7 @@ def stackoverflow(question):
 
 
 def rasa(user, question):
-    url = "http://localhost:5005/webhooks/rest/webhook"
+    url = "http://rasa-server:5005/webhooks/rest/webhook"
 
     payload = json.dumps({
       "sender": user,
@@ -127,5 +127,5 @@ def question():
 
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host='0.0.0.0', port=5000)
 

@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  rasa-server:
+    build: .
+    ports:
+      - "5005:5005"
+  action-server:
+    build: ./actions/
+    expose: 
+      - "5055"
